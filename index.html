@@ -3,36 +3,50 @@
 <head>
 	<title>Transcodify: convert any video to H.264 / .mp4 format</title>
 	<link rel="stylesheet" href="http://bootswatch.com/amelia/bootstrap.min.css">
-
+	<style>
+	body {
+		border-bottom: 1px solid #7D1D28;
+		padding-bottom: 30px;
+	}
+	</style>
 </head>
 <body>
 <div class="container">
 <div class="row">
-	<div class="navbar">
+	<div class="navbar ">
 	 	<div class="navbar-inner">
 			<a class="brand" href="/">Transcodify</a>
 			<ul class="nav">
 				<li class="active"><a href="/">Home</a></li>
-				<li><a href="#">About</a></li>
+				<li><a href="/about">About</a></li>
 			</ul>
 		</div>
 	</div>
 <div class="span8 offset2">
 
 	<h1>Transcodify</h1>
-	<p>Convert any video to H.264 / .mp4 format</p>
+	<p>Convert any video to the popular <b>H.264 / .mp4 / AAC</b> format</p>
 
 	<!-- <h1>T</h1> -->
 
 	<form action="/convert" method="post">
 		<div class="input-append">
 			<input name="url" class="span6" type="text" placeholder="http://my.video.com/file.mov">
-			<button class="btn btn-primary">Submit</button>
+			<button class="btn btn-primary">Convert</button>
 		</div>
 	</form>
-	
+	<!-- <p>* Note: since this is just a demo and I don't want my poor laptop to melt, all output files are shortened to 5 seconds.
+	 -->
 	<h2>What's this?</h2>
-	<p>This is a very simple service that allows you to convert any video available on the internet into the popular H.264 / .mp4 format.</p>
+	<p>This is a very simple service that allows you to convert any video available on the internet into the popular format. Videos converted to this format will play on most modern devices, including mobile phones, tablets, gaming consoles and, of course, PC's.</p>
+
+	<h3>Technical details</h3>
+	<ul>
+		<li>Convert <b>any</b> format to H.264 / .mp4 / AAC</li>
+		<li>Build using Node.js / fluent-ffmpeg / Express.js / Mustache</li>
+		<li>HTTP only. HTTPS is not supported by FFMPEG.</li>
+		<li>Length of output files is limited to 5 seconds. (demo)</li>
+	</ul>
 
 </div>
 </div>
